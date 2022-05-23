@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 2</title>
+    <script>
+        var quebrada= false;
+        function mudaLampada(tipo){
+
+            if(tipo == 1){
+
+                arquivo = "../arquivos/projeto-glass-html5/_imagens/lampada-acesa.jpg";
+
+}
+            if(tipo == 2){
+
+                arquivo = "../arquivos/projeto-glass-html5/_imagens/lampada-apagada.jpg";
+}
+
+            if(tipo == 3){
+
+                arquivo = "../arquivos/projeto-glass-html5/_imagens/lampada-quebrada.jpg";
+                
+}
+            
+            if(!quebrada){
+                document.getElementById("luz").src= arquivo;
+                if(tipo== 3){
+                    quebrada= true;''
+                }
+            }
+            
+        }
+            
+
+    
+    </script>
+</head>
+<body>
+    <h1 id="h1">Teste Lâmpada</h1>
+    <div id="img">
+     <img src="../arquivos/projeto-glass-html5/_imagens/lampada-apagada.jpg" id="luz" alt="Lâmpada" onmouseenter="mudaLampada(1)" onmouseout="mudaLampada(2)" onclick="mudaLampada(3)"/>
+    </div>
+    <h2 id="h2">ON/<br>off/<br>broke/</h2>
+    <!--Quando o mouse passar em cima de lãmpada, ela liga, quando tirar ela apaga, e quando 
+    clicar ela quebra, f5 reinia o programa.-->
+
+    <style>
+        #luz{
+
+            width: 300px;
+            height: 400px;
+          
+        }
+
+        #img{
+            text-align: center;
+            
+        }
+
+        #h1{
+
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+
+        }
+
+        #h2{
+            text-align: center;
+        }
+    </style>
+    
+</body>
+</html>
